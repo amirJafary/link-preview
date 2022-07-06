@@ -1,25 +1,64 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import NumberFormat from 'react-number-format';
+import TextField from '@material-ui/core/TextField';
+import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            numberformat: 0,
+            en: true
+        };
+    }
+
+    NumberFormatCustom = (props, state) => {
+        const { inputRef, onChange, name, ...other } = props;
+        const { en, numberformat } = state;
+        return (
+            <>
+                <NumberFormat
+                    {...other}
+                    getInputRef={inputRef}
+                    allowNegative={false}
+                    onValueChange={() => {
+                        onChange({
+                            target: {
+                                name: name,
+                                value: numberformat,
+                            },
+                        });
+                    }}
+                    thousandSeparator
+                    isNumericString
+                />
+                <span>{en ? 'AED' : 'Rial'}</span>
+            </>
+        );
+    }
+
+    handleChange = (e) => {
+        console.info(e);
+        this.setState({
+            numberformat: e.target.value
+        })
+    }
+    render() {
+        return (
+            <div>
+                <TextField
+                    value={this.state.numberformat}
+                    onChange={this.handleChange}
+                    name="numberformat"
+                    label='currency'
+                    id="formatted-numberformat-input"
+                    InputProps={{
+                        inputComponent: this.NumberFormatCustom,
+                    }}
+                />
+
+            </div>
+        )
+    }
 }
-
-export default App;
