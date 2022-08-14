@@ -32,16 +32,27 @@ const Calculator = () => {
         let result = null;
 
         if (value === 'AC') {
+
             setKeyPressed('')
+
+        } else if (id === 18) {
+
+            let hasDot = keyPressed.includes('.');
+            concatValue = !hasDot ? keyPressed + value : keyPressed;
+            console.log('yes', keyPressed.includes('.'));
+            setKeyPressed(concatValue);
+
         } else if (id === 19) {
-            concatValue = keyPressed
-            // console.log(toString(eval(keyPressed + value)));
+
+            concatValue = keyPressed;
             result = eval(concatValue);
-            console.log('yes', concatValue);
             setKeyPressed(result);
+
         } else {
-            concatValue = keyPressed + value
-            setKeyPressed(concatValue)
+
+            concatValue = keyPressed + value;
+            setKeyPressed(concatValue);
+
         }
     }
 
