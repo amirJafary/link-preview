@@ -48,7 +48,6 @@ const Questions = () => {
 
     const userAnswerInfo = askQuestion();
     const answerInfoHeaader = ['No', 'Question', 'Answer', 'Your Answer', 'Answer Is Currect'];
-    console.log(userAnswerInfo?.userAnswerInfo);
 
     return (
         <div className='h-full flex justify-center flex-col align-items-center'>

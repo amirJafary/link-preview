@@ -3,3 +3,23 @@
     font-size: 2rem !important;
     color: dimgray;
 }
+
+.timerLabels{
+    display:  flex;
+    font-weight: bold; 
+    font-size: medium; 
+    justify-content: start;
+    margin-bottom: .5rem;
+}
+
+.timerValues{
+    width: 5rem;
+    height: 5rem;
+    margin-right: 1rem;
+    display: flex; 
+    align-items:center; 
+    justify-content: center;
+    background: rgba(231, 87, 87, 0.342);
+    font-weight: bold;
+    font-size: 1rem;
+}

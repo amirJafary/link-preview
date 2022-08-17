@@ -7,7 +7,6 @@ const TinyTexteditor = () => {
         // if (editorRef.current) {
         //     console.log(editorRef.current.getContent());
         // }
-        console.log('value is => ',e)
     };
     return (
         <>

@@ -12,7 +12,6 @@ const Products = () => {
 
     return (
         <div>
-            {console.info('---------value is =>', value)}
             <h1>Products</h1>
         </div >
     )

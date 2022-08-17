@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import 'rsuite/dist/rsuite.css';
-import Todo from './todoList/Todo';
-import Questions from './questions/Questions';
-import Calculator from './calculator/Calculator';
+import TimerCountDown from './timerCountDown/TimerCountDown';
 
-ReactDOM.render(<Calculator/>, document.getElementById('root'));
+ReactDOM.render(<TimerCountDown/>, document.getElementById('root'));

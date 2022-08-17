@@ -35,7 +35,6 @@ const SignUp = () => {
     const submitClicked = (e) => {
         e.preventDefault();
         if (!Object.keys(errors).length) {
-            console.log(data);
             notify('your informations submit succesfully',true);
         } else {
             setTouched({

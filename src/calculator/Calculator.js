@@ -39,7 +39,6 @@ const Calculator = () => {
 
             let hasDot = keyPressed.includes('.');
             concatValue = !hasDot ? keyPressed + value : keyPressed;
-            console.log('yes', keyPressed.includes('.'));
             setKeyPressed(concatValue);
 
         } else if (id === 19) {

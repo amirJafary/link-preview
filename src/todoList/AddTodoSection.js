@@ -68,8 +68,6 @@ const AddTodoSection = () => {
         setTodo(deleteSelectedTodo);
     }
 
-    console.log(todo);
-
     return (
         <div className='d-flex pt-5 justify-content-center'>
             <Card className='p-5 Regular shadow w-50'>

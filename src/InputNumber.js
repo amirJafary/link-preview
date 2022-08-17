@@ -32,7 +32,6 @@ export default class InputNumber extends Component {
         this.setState({
             value: e.target.value
         });
-        console.log(Value);
     }
 
     render() {
