@@ -9,6 +9,8 @@ class helper {
 
     static createRandomNumber = () => (Math.floor(Math.random() * 10));
 
+    static hasDot = (text) => text.includes('.');
+
     static createArray = (length) => new Array(length).fill();
 
     static isEmpty = (value) => {
@@ -20,6 +22,27 @@ class helper {
             return false
         }
 
+    }
+
+    static converSecondToFullDate = (time) => {
+
+        let converSecondToMinute = time / 60;
+        let minutePartIs = helper.hasDot(converSecondToMinute.toString()) ? converSecondToMinute.toString().split('.') : converSecondToMinute;
+        let secondIs = minutePartIs[1] ? Math.round(+`.${minutePartIs[1]}` * 60) : 0;
+        let converMinuteToHour = +minutePartIs[0] / 60;
+        let hourPartIs = helper.hasDot(converMinuteToHour.toString()) ? converMinuteToHour.toString().split('.') : converMinuteToHour;
+        let minuteIs = hourPartIs[1] ? Math.round(+`.${hourPartIs[1]}` * 60) : 0;
+        let converHourToDay = +hourPartIs[0] / 24;
+        let dayPartIs = helper.hasDot(converHourToDay.toString()) ? converHourToDay.toString().split('.') : converHourToDay;
+        let hourIs = dayPartIs[1] ? Math.round(+`.${dayPartIs[1]}` * 24) : 0;
+        let dayIs = dayPartIs[0] ? +dayPartIs[0] : 0
+
+        return {
+            'day': dayIs,
+            'hour': hourIs,
+            'minute': minuteIs,
+            'second': secondIs,
+        }
     }
 
     static getMonthName(id) {
