@@ -2,6 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import 'rsuite/dist/rsuite.css';
-import TimerCountDown from './timerCountDown/TimerCountDown';
+import LoginForm from './LoginForm';
 
-ReactDOM.render(<TimerCountDown/>, document.getElementById('root'));
+ReactDOM.render(<LoginForm/>, document.getElementById('root'));
