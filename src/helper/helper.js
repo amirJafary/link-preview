@@ -45,6 +45,17 @@ class helper {
         }
     }
 
+    static makeRandomRGBColor() {
+
+        let redValue = Math.floor(Math.random() * 255);
+        let greenValue = Math.floor(Math.random() * 255);
+        let blueValue = Math.floor(Math.random() * 255);
+
+        let color = 'rgb(' + redValue + ',' + greenValue + ',' + blueValue + ')'
+
+        return color;
+    }
+
     static getMonthName(id) {
         switch (id) {
             case 1: return 'January';
@@ -78,6 +89,15 @@ class helper {
         const current = (new Date(Date.now()))
         current.setDate(current.getDate() - 7);
         return current.toISOString().slice(0, 10);
+    }
+
+    static CalculateTheSumOfSeveralNumbers = (numbers) => {
+
+        let sumNumbers = !this.isEmpty(numbers) && numbers.reduce((prev, current) => {
+            return prev + current
+        })
+
+        return sumNumbers;
     }
 
 }
