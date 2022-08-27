@@ -17,5 +17,21 @@ class Services {
                 console.log(res.data);
             });
     }
+
+    static getCurrentWeatherByCityName = (cityName, callBack) => {
+        let apiKey = 'db2a20c82627479f605416aaaad602bd'
+        let baseURL = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
+        // let baseURL = `https://api.openweathermap.org/data/2.5/weather?id=524901&lang=fa&appid=${apiKey}`;
+
+        axios.get(baseURL)
+            .then(res => {
+                callBack({ hasError: false, res })
+            })
+            .catch(error => {
+                callBack({ error: error.message, hasError: true })
+            }
+            )
+    }
+
 }
 export default Services;
