@@ -31,27 +31,27 @@ body {
 
 .option:nth-child(1) {
     --defultBackground: #13bf13;    
-    background-image: url("../spring.jpg");
+    background-image: url("../../images/spring.jpg");
 }
 
 .option:nth-child(2) {
     --defultBackground: #fc6e51;
-    background-image: url("../autumn.jpg");
+    background-image: url("../../images/autumn.jpg");
 }
 
 .option:nth-child(3) {
     --defultBackground: #ffce54;
-    background-image: url("../summer.jpg");
+    background-image: url("../../images/summer.jpg");
 }
 
 .option:nth-child(4) {
     --defultBackground: #2ecc71;
-    background-image: url("../winter.jpg");
+    background-image: url("../../images/winter.jpg");
 }
 
 .option:nth-child(5) {
     --defultBackground: #5d9cec;
-    background-image: url("../rainy.jpg");
+    background-image: url("../../images/rainy.jpg");
 }
 
 .option.active {

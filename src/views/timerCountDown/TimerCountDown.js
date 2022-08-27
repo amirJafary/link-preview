@@ -1,8 +1,8 @@
 import { Card } from '@material-ui/core';
 import React, { useEffect, useState } from 'react';
 
-import helper from '../helper/helper';
-import '../App.css'
+import Helper from '../../helper/helper';
+import '../../style/App.css'
 
 const TimerCountDown = () => {
 
@@ -12,7 +12,7 @@ const TimerCountDown = () => {
     const [intervalId, setIntervalId] = useState(0)
 
     useEffect(() => {
-        setTimerData(helper.converSecondToFullDate(10))
+        setTimerData(Helper.converSecondToFullDate(10))
         const timerCountDown = setInterval(() => {
             setTimerData((prevState) => {
                 return {

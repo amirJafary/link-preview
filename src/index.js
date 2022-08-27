@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import './style/index.css';
 import 'rsuite/dist/rsuite.css';
-import LoginForm from './LoginForm';
+import AirTripWebSite from './views/airTripWebSite/AirTripWebSite';
 
-ReactDOM.render(<LoginForm/>, document.getElementById('root'));
+ReactDOM.render(<AirTripWebSite/>, document.getElementById('root'));

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Card, TextField } from '@material-ui/core';
 
-import '../App.css'
+import '../../style/App.css'
 
 const Calculator = () => {
 
