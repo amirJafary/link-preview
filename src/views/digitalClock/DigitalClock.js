@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import helper from '../../helper/helper';
 
-const GetDateAndTime = () => {
+const DigitalClock = () => {
 
     const [dateNow, setDateNow] = useState()
 
@@ -52,4 +52,4 @@ const GetDateAndTime = () => {
     );
 };
 
-export default GetDateAndTime;
+export default DigitalClock;

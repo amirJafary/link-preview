@@ -37,6 +37,8 @@
     "react-tinymce": "^0.7.0",
     "react-toastify": "^8.2.0",
     "redux": "^4.1.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.4.1",
     "rsuite": "^5.15.0",
     "rsuite-table": "^5.5.1",
     "sass": "^1.51.0",
