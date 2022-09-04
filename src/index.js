@@ -2,6 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/index.css';
 import 'rsuite/dist/rsuite.css';
-import AirTripWebSite from './views/airTripWebSite/AirTripWebSite';
+import App from './App';
 
-ReactDOM.render(<AirTripWebSite/>, document.getElementById('root'));
+ReactDOM.render(<App/>, document.getElementById('root'));

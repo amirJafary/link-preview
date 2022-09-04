@@ -1,25 +1,38 @@
-.MuiInputBase-input{
+.MuiInputBase-input {
     padding: 10px !important;
     font-size: 2rem !important;
     color: dimgray;
 }
 
-.timerLabels{
-    display:  flex;
-    font-weight: bold; 
-    font-size: medium; 
+.timerLabels {
+    display: flex;
+    font-weight: bold;
+    font-size: medium;
     justify-content: start;
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
 }
 
-.timerValues{
+.timerValues {
     width: 5rem;
     height: 5rem;
     margin-right: 1rem;
-    display: flex; 
-    align-items:center; 
+    display: flex;
+    align-items: center;
     justify-content: center;
     background: rgba(231, 87, 87, 0.342);
     font-weight: bold;
     font-size: 1rem;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
