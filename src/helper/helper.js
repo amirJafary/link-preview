@@ -45,6 +45,26 @@ class helper {
         }
     }
 
+    static converSecondTominute = (time) => {
+
+        let converSecondToMinute = time / 60;
+        let minutePartIs = helper.hasDot(converSecondToMinute.toString()) ? converSecondToMinute.toString().split('.') : converSecondToMinute;
+        let secondIs = minutePartIs[1] ? Math.round(+`.${minutePartIs[1]}` * 60) : 0;
+        let converMinuteToHour = +minutePartIs[0] / 60;
+        let hourPartIs = helper.hasDot(converMinuteToHour.toString()) ? converMinuteToHour.toString().split('.') : converMinuteToHour;
+        let minuteIs = hourPartIs[1] ? Math.round(+`.${hourPartIs[1]}` * 60) : 0;
+
+        if (minuteIs < 10) {
+            minuteIs = '0' + minuteIs;
+        }
+
+        if (secondIs < 10) {
+            secondIs = '0' + secondIs;
+        }
+
+        return `${minuteIs} : ${secondIs}`        
+    }
+
     static makeRandomRGBColor() {
 
         let redValue = Math.floor(Math.random() * 255);
