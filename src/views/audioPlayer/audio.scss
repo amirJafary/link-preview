@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bgWallpaper{
+    background-image: url('../../images/pic2.avif');
+    background-size: cover;
+    height: 100vh;
+    padding: 3rem;
+}
