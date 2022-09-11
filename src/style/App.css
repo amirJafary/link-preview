@@ -24,15 +24,23 @@
     font-size: 1rem;
 }
 
+.truncate-text {
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+    width: 100%;
+    white-space: nowrap;
+    display: inline-block;
+    position: relative;
+}
+
 .btn {
     padding: 10px 20px;
     border-radius: 1rem;
     overflow: hidden;
 }
 
-.flex-center{
+.flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
