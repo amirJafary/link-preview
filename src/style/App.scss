@@ -1,7 +1,17 @@
+$backgroundUrl: "../images/summer.jpg";
+
 .MuiInputBase-input {
     padding: 10px !important;
     font-size: 2rem !important;
     color: dimgray;
+}
+
+.fullBackground {
+    background: url($backgroundUrl);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+    margin: 0 !important;
 }
 
 .timerLabels {
