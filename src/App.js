@@ -1,20 +1,16 @@
 import React from 'react';
-import { Provider } from 'react-redux';
 
-import Counter from './redux/components/Counter';
-import Store from './redux/Store'
-import './style/App.css'
-
+import './style/App.scss';
+import ChangeTheme from './views/changeTheme/ChangeTheme';
 
 const App = () => {
 
     return (
-        <Provider store={Store()}>
-            <div className='App h-full'>
-                <Counter />
-            </div>
-        </Provider>
+        <div className='w-full h-screen'>
+            <ChangeTheme />
+        </div>
     );
 };
 
 export default App;
+ 
