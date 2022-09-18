@@ -50,19 +50,19 @@ const BmiCalculator = () => {
             <div className='text-3xl'>Body Mass Index (BMI)</div>
             <div className='flex-center text-2xl m-20'>
                 <div>
-                    <label className='text-sm'>Your Weight</label>
+                    <label className='text-sm'>Your Weight is <span className='font-bold text-xl'>( {weight} )</span></label>
                     <RangeSlider labelStatus='auto'
-                        style={{ width: '250px' }}
+                        style={{ width: '250px', marginTop: '1.5rem' }}
                         min={30}
                         max={200}
                         value={weight}
                         rangeSliderChanged={weightChanged} />
                 </div>
 
-                <div className='mx-4'>
-                    <label className='text-sm'>Your Height</label>
+                <div className='ml-10'>
+                    <label className='text-sm'>Your Height is <span className='font-bold text-xl'>( {height} )</span></label>
                     <RangeSlider labelStatus='auto'
-                        style={{ width: '250px' }}
+                        style={{ width: '250px', marginTop: '1.5rem' }}
                         min={100}
                         max={220}
                         value={height}
