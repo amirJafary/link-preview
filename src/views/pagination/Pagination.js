@@ -42,7 +42,9 @@ const Pagination = () => {
     }, [currentPage])
 
     const setCurrentListByCurrentPage = () => {
-        setCurrentList(datas.slice((currentPage - 1) * 6, currentPage * 6));
+        let endIndex = currentPage * rowPerPage;
+        let startIndex = endIndex - rowPerPage;
+        setCurrentList(datas.slice(startIndex, endIndex));
     }
 
     const paginationChanged = (e) => {
