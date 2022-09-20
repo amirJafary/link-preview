@@ -1,4 +1,4 @@
-
+const tzoffset = ((new Date()).getTimezoneOffset() * 60000)
 class helper {
 
     static createArrayOfNumber = (length) => {
@@ -62,7 +62,7 @@ class helper {
             secondIs = '0' + secondIs;
         }
 
-        return `${minuteIs} : ${secondIs}`        
+        return `${minuteIs} : ${secondIs}`
     }
 
     static makeRandomRGBColor() {
@@ -94,19 +94,25 @@ class helper {
     }
 
     static getNowDate = () => {
-        const current = new Date(Date.now())
+        const current = new Date(Date.now() - tzoffset);
         // .toLocaleDateString('fa-IR') برای تاریخ شمسی
         return current.toISOString().slice(0, 10);
     }
 
+    static getCurrentTime = () => {
+        const current = new Date(Date.now() - tzoffset);
+        // .toLocaleDateString('fa-IR') برای تاریخ شمسی
+        return current.toISOString().slice(11, 19);
+    }
+
     static getCustomPreviousMonth = (month) => {
-        const current = new Date(Date.now())
+        const current = new Date(Date.now() - tzoffset);
         current.setMonth(current.getMonth() - month);
         return current.toISOString().slice(0, 10);
     }
 
     static getPreviousWeek = () => {
-        const current = (new Date(Date.now()))
+        const current = (new Date(Date.now() - tzoffset));
         current.setDate(current.getDate() - 7);
         return current.toISOString().slice(0, 10);
     }
