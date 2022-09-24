@@ -56,7 +56,22 @@ $backgroundUrl: "../images/summer.jpg";
 }
 
 .border-gray-solid {
-    border:1px solid rgba($color: #808080, $alpha: 0.5);
+    border: 1px solid rgba($color: #808080, $alpha: 0.5);
     border-radius: 1rem;
     box-shadow: 0px 2px 4px 0px rgba($color: #808080, $alpha: 0.5);
+}
+
+.input {
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    padding: 5px 10px;
+
+    &:hover {
+        border-bottom: 1px solid rgba($color: #6b0000, $alpha: 0.5);
+    }
+
+    &:focus {
+        border-bottom: 1px solid rgba($color: #6b0000, $alpha: 0.5);
+    }
+
 }
