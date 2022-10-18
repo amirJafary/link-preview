@@ -126,6 +126,27 @@ class helper {
         return sumNumbers;
     }
 
+    static setTextInUserClipboard = (text) => {
+        if (window.navigator.clipboard) {
+            window.navigator.clipboard.writeText(text)
+            alert('text copy is successfuly')
+        } else {
+            alert('text copy was unsuccessful')
+        }
+    }
+
+    static readTextFromUserClipboard = (callback) => {
+        if (window.navigator.clipboard) {
+            window.navigator.clipboard.readText().then(res => callback(res))
+        }
+    }
+    
+    static getUserBatteryInfos = (callback) => {
+        if (window.navigator.clipboard) {
+            window.navigator.getBattery().then(res=>callback(res))
+        }
+    }
+
 }
 
 export default helper;
