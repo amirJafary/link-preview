@@ -140,11 +140,40 @@ class helper {
             window.navigator.clipboard.readText().then(res => callback(res))
         }
     }
-    
+
     static getUserBatteryInfos = (callback) => {
         if (window.navigator.clipboard) {
-            window.navigator.getBattery().then(res=>callback(res))
+            window.navigator.getBattery().then(res => callback(res))
         }
+    }
+
+    static calcuteTotal = (numbers) => {
+        let total = numbers.reduce((prevNumber, currentNumber) => {
+            let calcute = prevNumber + currentNumber;
+            return calcute;
+        })
+
+        return total;
+    }
+
+
+    static countThingsInArray = (values) => {
+        let countThings = values.reduce((obj, currentItem) => {
+            return { ...obj, [currentItem]: (obj[currentItem] || 0) + 1 };
+        }, {})
+
+        return countThings;
+    }
+
+    static choseMaxValue = (values) => {
+        let maxValue = values.reduce((prevItem, currentItem) => {
+            if (prevItem > currentItem) {
+                return prevItem;
+            } else return currentItem;
+
+        }, 0)
+
+        return maxValue;
     }
 
 }
