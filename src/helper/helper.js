@@ -117,6 +117,12 @@ class helper {
         return current.toISOString().slice(0, 10);
     }
 
+    static getCustomNextDay = (day) => {
+        const current = (new Date(Date.now() - tzoffset));
+        current.setDate(current.getDate() + day);
+        return current
+    }
+
     static CalculateTheSumOfSeveralNumbers = (numbers) => {
 
         let sumNumbers = !this.isEmpty(numbers) && numbers.reduce((prev, current) => {
