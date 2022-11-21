@@ -55,7 +55,7 @@ class Services {
             })
     }
 
-    static getUseraFromFirebaseDB = (callBack) => {
+    static getUsersFromFirebaseDB = (callBack) => {
         let baseUrl = 'https://test-68223-default-rtdb.firebaseio.com/users.json'
         axios.get(baseUrl)
             .then(res => {
