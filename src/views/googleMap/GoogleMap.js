@@ -1,7 +1,7 @@
 import GoogleMapReact from 'google-map-react';
 import { useState } from 'react';
 
-const AnyReactComponent = () => <div><i class="fa-solid text-4xl text-red-700 fa-location-crosshairs"></i></div>;
+const AnyReactComponent = () => <div><i className="fa-solid text-4xl text-red-700 fa-location-crosshairs"></i></div>;
 
 const GoogleMap = () => {
 
@@ -16,7 +16,7 @@ const GoogleMap = () => {
 
     return (
         <GoogleMapReact
-            apiKey={'AIzaSyDw_gbVsIcx-coD3ZkSEjv1zue-ltEBNhE'}
+            bootstrapURLKeys={{ key: "AIzaSyAMtYrcGGhBqB6CJ6NgajE_Q3VbTImgr58" }}
             center={[marker.lat, marker.lng]}
             onClick={markerChanged}
             zoom={marker.zoom}>
